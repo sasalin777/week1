@@ -20,8 +20,14 @@ public class Rectangle {
         if ((this.width == 0) & (this.height == 0)) {
             for (int i = 1; i <= 1; i++) {
                 for (int j = 1; j <= 1; j++) {
-                    System.out.print("B");
+                    if (this.color == "Green")
+                    {System.out.print("\033[32m"+"G");}
+                    else if (this.color == "Red")
+                    {System.out.print("\033[31m"+"R");}
+                    else
+                    {System.out.print("\033[34m"+"B");}
                 }
+                System.out.print("\n");
             }
         } else {
             for (int i = 1; i <= this.height; i++) {
